@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comming soon</title>
+    <link rel ="stylesheet" href ="{% static 'style.css' %}">
+    <link rel="preconnect" href="{% static 'https://fonts.googleapis.com' %}">
+    <link rel="preconnect" href="{% static 'https://fonts.gstatic.com' %}" crossorigin>
+    <link href="{% static 'https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif:wght@400;700&family=Oswald:wght@300&display=swap' %}" rel="stylesheet">
+    <style>
+        h1 {
+          text-shadow: 2.5px 0.5px #000000;
+        }
+        div.mail {
+          text-decoration-style: solid;
+        }
+        
+        </style>
+</head>
+<body>
+    <div class="header">   
+    <div class="container"> 
+    <div class="col-2">
+        <img src="{% static 'img.png' %}", align="right">
+    </div>
+    <div class="row">
+        <div class="col-2">
+           <h1>&nbsp;COMING SOON... </h1>
+        </div>
+    </div>
+    <div class="text">
+    <ui><h1>&#8594; Get Global Business Ideas</h1></ui>
+    <ui><h1>&#8594; Get Your Bussiness Expansion</h1></ui>
+    <ui><h1>&#8594; Bussiness Networking</h1></ui>
+    </div>
+    <form action="/" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
+            {% comment %} <a href="" class="submit">submit</a><br> {% endcomment %} 
+          </div>
+          <div class="form-group">
+          <button type="submit" class="btn btn-primary">Submit</button><br><br>
+          <li>You will receive an email when portal will be launched</li>
+          </div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    </form>
+    </div>
+    </div>
+</body>
+</html>
